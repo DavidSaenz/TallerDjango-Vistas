@@ -10,7 +10,7 @@ def variables_view(request):
         id = request.GET.get("id", None)
         if id:
             variable_dto = vl.get_variable(id)
-            variable = serializers.serialize('json', [variable_dto,])
+            variable = serializers.serialize('json', [variable_dto, ])
             return HttpResponse(variable, 'application/json')
         else:
             variables_dto = vl.get_variables()
@@ -19,7 +19,7 @@ def variables_view(request):
 
     if request.method == 'POST':
         variable_dto = vl.create_variable(json.loads(request.body))
-        variable = serializers.serialize('json', [variable_dto,])
+        variable = serializers.serialize('json', [variable_dto, ])
         return HttpResponse(variable, 'application/json')
 
 @csrf_exempt
