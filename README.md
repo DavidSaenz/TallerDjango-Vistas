@@ -1,20 +1,8 @@
-# Monitoring Views Workshop
+se adjunta el resultado de las consultas para las nuevas url
+# http://localhost:8000/measurements/
 
-* if you want a easy installation use **pipenv\*** else use **requirements.txt**
+[{"model": "measurements.measurement", "pk": 1, "fields": {"variable": 1, "value": 25.0, "unit": "C", "place": "place 1", "dateTime": "2022-02-13T19:13:56.298Z"}}, {"model": "measurements.measurement", "pk": 2, "fields": {"variable": 1, "value": 2.0, "unit": "C", "place": "place 2", "dateTime": "2022-02-13T19:14:04.547Z"}}, {"model": "measurements.measurement", "pk": 3, "fields": {"variable": 2, "value": 10.0, "unit": "C", "place": "place 1", "dateTime": "2022-02-13T19:14:16.236Z"}}]
 
-**pipenv:** can be installed wih:
+# http://localhost:8000/measurements/3
 
-```bash
-pip install pipenv
-```
-
-dont forget to check if you have the right python version: 3.8
-
-* Executing with pipenv 
-```bash
-pipenv run python {command}
-```
-Example:
-```bash
-pipenv run python manage.py makemigrations 
-```
+[ {"model": "measurements.measurement", "pk": 3, "fields": {"variable": 2, "value": 10.0, "unit": "C", "place": "place 1", "dateTime": "2022-02-13T19:14:16.236Z"}}]
